@@ -33,5 +33,39 @@
 └── README.md
 ```
 
+### RELEASES ###
+* mysql-updatetables.sh
+```
+OUTPUT EX:
+mysql: [Warning] Using a password on the command line interface can be insecure.
+the script 043.createtable.sql won't be executed
+mysql: [Warning] Using a password on the command line interface can be insecure.
+the script 045.createtable.sql won't be executed
+mysql: [Warning] Using a password on the command line interface can be insecure.
+the script 049.createtable.sql won't be executed
+...
+```
+
+* mysql-updatetables1_2.sh
+- New Backend secure login archiving client credentials under ~/.my.cfn
+```
+~$ cat .my.cnf
+[client]
+user=
+password=
+host=
+```
+- No Output login warning updating the mysql CL using .my.cfn
+```
+OUTPUT EX:
+the script 043.createtable.sql won't be executed
+the script 045.createtable.sql won't be executed
+the script 049.createtable.sql won't be executed
+the script 051createtable.sql won't be executed
+the script 74e.createtable.sql won't be executed
+...
+```
+
 ### ETC ###
 ![Alt text](https://i0.wp.com/farm5.staticflickr.com/4327/36248622776_56cfc99530_n.jpg?resize=525%2C289&ssl=1 "MySQL Logo")
+
