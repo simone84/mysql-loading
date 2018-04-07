@@ -29,7 +29,7 @@
 ```
 .
 ├── mysql-updatetables1_2.sh
-├── mysql-updatetables.sh
+├── mysql-updatetables1_1.sh
 └── README.md
 ```
 
@@ -66,6 +66,21 @@ the script 74e.createtable.sql won't be executed
 ...
 ```
 
+### HOW TO RUN IT ###
+* Download the repository;
+* Make sure to have installed mysql-server with related client libraries and is already up and running;
+* Setup the login credential inside the script (RELEASE1_1) and ~/.my.cfn (RELEASE 1_2);
+* Make sure the dedicated instance has been created with the versionTable setup;
+* Change the script folder variable in the script and fill it with empty files.
+* run the script: ./mysql-updatetables${RELEASE}.sh and check the output.
+```
+~$ git clone https://github.com/simone84/mysql-loading.git ; cd mysql-loading
+~$ {use yum/apt-get/brew to install mysql db server} and start it EX: "/etc/init.d/mysql start"
+~$ {follow the example in the Release Notes}
+~$ check if the instance has been created, switch on it and run the following query: "select version from versionTable;"
+~$ Setup SCRIPTDIR in the script and change it if you want selecting the new sqlfile folder
+~$ Run the script, check the output and good luck :-)
+```
+
 ### ETC ###
 ![Alt text](https://i0.wp.com/farm5.staticflickr.com/4327/36248622776_56cfc99530_n.jpg?resize=525%2C289&ssl=1 "MySQL Logo")
-
