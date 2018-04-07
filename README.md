@@ -1,4 +1,4 @@
-## ASSESMENT ##
+## ASSESSMENT ##
 
 * The following use case might be a real-life example from one of our customers, please deliver your best possible solution. Please go through the described scenario and write a script, in one of the below languages, implementing a fix to the issue below. For the development of the scripts you have 4 hours and are allowed to use Google and any other material as long as the work submitted was written by you. 
 
