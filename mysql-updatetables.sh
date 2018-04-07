@@ -4,7 +4,7 @@
 SCRIPTDIR=/tmp/updating-scripts
 DBNAME=ecs
 DBUSER=ecs
-DBPASS=forzaroma
+DBPASS=password
 DBHOST=localhost
 
 ### UPGRADING DB ###
