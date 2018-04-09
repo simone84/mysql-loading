@@ -24,9 +24,20 @@
 ### Index ###
 ```
 .
+├── Dockerfile
 ├── mysql-updatetables1_1.sh
 ├── mysql-updatetables1_2.sh
-└── README.md
+├── README.md
+├── run.sh
+└── updating-scripts
+    ├── 043.createtable.sql
+    ├── 045.createtable.sql
+    ├── 049.createtable.sql
+    ├── 051createtable.sql
+    ├── 121.createtable.sql
+    ├── 128createtable.sql
+    ├── 129createtable.sql
+    └── 721.createtable.sql
 ```
 
 ### RELEASES ###
@@ -77,6 +88,15 @@ the script 74e.createtable.sql won't be executed
 ~$ Setup SCRIPTDIR in the script and change it if you want selecting the new sqlfile folder
 ~$ Run the script, check the output and good luck :-)
 ```
+
+### HOW TO RUN WITH DOCKER ###
+* If you don't want to mess around setting up the db, just pull the public docker image like the following example:
+( if you exec the container twice or more the output will show the skipping process if files have been already elaborated )
+```
+sudo docker run -d -t --name mysql-ecs simone84/centos6-mysql:latest
+sudo docker exec -it mysql-ecs /tmp/mysql-updatetables1_2.sh
+```
+* If you want feel free to build it using the Dockerfile and the run.sh on the main page
 
 ### ETC ###
 ![Alt text](https://i0.wp.com/farm5.staticflickr.com/4327/36248622776_56cfc99530_n.jpg?resize=525%2C289&ssl=1 "MySQL Logo")
